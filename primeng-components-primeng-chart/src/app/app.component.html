@@ -1,0 +1,39 @@
+<!-- Bar Chart -->
+<!-- <p-chart
+  type="bar"
+  [data]="basicData"
+  [options]="basicOptions"
+  (onDataSelect)="selectData($event)"
+  height="80vh"
+  width="40vw"
+></p-chart> -->
+
+
+<!-- Doughtnut Chart -->
+<p-chart
+  type="doughnut"
+  [data]="donutData"
+  [options]="basicOptions"
+  (onDataSelect)="selectData($event)"
+  height="40vh"
+  width="40vw"
+></p-chart>
+
+<!-- Stacked Bar Chart -->
+<p-chart 
+  type="bar" 
+  [data]="mixedData"  
+  [options]="stackedOptions"
+  height="40vh"
+  width="40vw"
+></p-chart>
+
+
+<p-chart type="line" 
+  [data]="mixedData" 
+  [options]="basicOptions" 
+  class="h-[30rem]" />
+
+
+
+
