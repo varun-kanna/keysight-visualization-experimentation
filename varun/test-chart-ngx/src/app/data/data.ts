@@ -431,34 +431,6 @@ export var numStationsByStatus = [
   },
 ];
 
-export var instrumentsByStatus = [
-  {
-    name: 'Online',
-    value: 174,
-    percentage: 79.1,
-  },
-  {
-    name: 'Offline',
-    value: 12,
-    percentage: 5.5,
-  },
-  {
-    name: 'Down for Maintenance',
-    value: 7,
-    percentage: 3.2,
-  },
-  {
-    name: 'Due for Calibration',
-    value: 5,
-    percentage: 2.3,
-  },
-  {
-    name: 'Unknown',
-    value: 22,
-    percentage: 10.0,
-  },
-];
-
 export var oeeScore = [
   {
     name: 'Station 1',

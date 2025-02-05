@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
+import { testRunsByTester } from '../data/data'; // Import the data
 
 @Component({
   selector: 'app-bar-chart',
@@ -10,13 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./bar-chart.component.css'],
 })
 export class BarChartComponent {
-  testRunsByTester = [
-    { name: 'Tester 1', value: 45 },
-    { name: 'Tester 2', value: 20 },
-    { name: 'Tester 3', value: 42 },
-    { name: 'Tester 4', value: 29 },
-    { name: 'Tester 5', value: 52 },
-  ];
+  testRunsByTester = testRunsByTester; // Assign the data to a variable
 
   view: [number, number] = [700, 400];
 
