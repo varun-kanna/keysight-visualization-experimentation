@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+ngx-charts-bar-vertical {
+  font-family: "Verdana", sans-serif;
+}
+
+/* Customize axis labels */
+.text-label,
+.axis-label {
+  font-family: "Verdana", sans-serif !important;
+  font-size: 14px;
+}

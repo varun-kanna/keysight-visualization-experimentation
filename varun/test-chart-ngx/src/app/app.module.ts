@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AppComponent } from './app.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component'; // Import your chart component
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
-    // Optionally, remove TestRunsChartComponent from here if it's standalone.
     AppComponent,
+    BarChartComponent, // Add this to declarations
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, NgxChartsModule],
+  imports: [
+    BrowserModule,
+    NgxChartsModule, // Ensure ngx-charts module is imported
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

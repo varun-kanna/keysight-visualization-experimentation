@@ -1,22 +1,13 @@
 import { Component } from '@angular/core';
-import { TestRunsChartComponent } from './components/test-chart-ngx/test-chart-ngx.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { CommonModule } from '@angular/common';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [TestRunsChartComponent],
-  template: `
-    <div class="container">
-      <h1>Test Runs Analysis</h1>
-      <app-test-runs-chart></app-test-runs-chart>
-    </div>
-  `,
-  styles: [
-    `
-      .container {
-        padding: 20px;
-      }
-    `,
-  ],
+  standalone: true, // Required for standalone components
+  imports: [CommonModule, NgxChartsModule, BarChartComponent], // Import required modules
+  template: `<app-bar-chart></app-bar-chart>`, // Use the bar chart component
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {}
