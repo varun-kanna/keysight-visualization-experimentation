@@ -1,14 +1,211 @@
-<ngx-charts-bar-vertical
-  [view]="view"
-  [scheme]="colorScheme"
-  [results]="testRunsByTester"
-  [gradient]="gradient"
-  [xAxis]="showXAxis"
-  [yAxis]="showYAxis"
-  [legend]="showLegend"
-  [showXAxisLabel]="showXAxisLabel"
-  [showYAxisLabel]="showYAxisLabel"
-  [xAxisLabel]="xAxisLabel"
-  [yAxisLabel]="yAxisLabel"
->
-</ngx-charts-bar-vertical>
+<div class="bar-container">
+  <h1>Bar Charts</h1>
+  <div class="container">
+    <h2>Test Runs by Tester</h2>
+    <ngx-charts-bar-vertical
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="colorSchemeAllBlue"
+      [results]="testRunsByTester"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Tester Names'"
+      [yAxisLabel]="'Number of Test Runs'"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+  <div class="container">
+    <h2>Test First Pass / Re-Test / Fail</h2>
+    <ngx-charts-bar-vertical
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="'vivid'"
+      [results]="testFirstPassReTestFail"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Statuses'"
+      [yAxisLabel]="'Failute count'"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+  <div class="container">
+    <h2>Failure count by Test Name / Campaign</h2>
+    <ngx-charts-bar-vertical
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="'natural'"
+      [results]="testFailureCount"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Test Names'"
+      [yAxisLabel]="'Failute count'"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+  <div class="container">
+    <h2>Station Location</h2>
+    <ngx-charts-bar-vertical
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="'cool'"
+      [results]="stationsByLocation"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Countries'"
+      [yAxisLabel]="'Station  count'"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+  <div class="container">
+    <h2>Station Usage</h2>
+    <ngx-charts-bar-vertical
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="'fire'"
+      [results]="stationUsage"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Percentage %'"
+      [yAxisLabel]="'Percent'"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+  <div class="container">
+    <h2>Pending Updates</h2>
+    <ngx-charts-bar-vertical
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="'solar'"
+      [results]="pendingUpdatesByStatus"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Series'"
+      [yAxisLabel]="'Count'"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+  <div class="container">
+    <h2>Update History</h2>
+    <ngx-charts-bar-vertical
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="'air'"
+      [results]="updateHistoryByStatus"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Different modes'"
+      [yAxisLabel]="'Count'"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+  <div class="container">
+    <h2>Releases</h2>
+    <ngx-charts-bar-vertical
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="'aqua'"
+      [results]="releaseByStatus"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Series'"
+      [yAxisLabel]="'Count'"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+  <div class="container">
+    <h2>Overall OEE</h2>
+    <ngx-charts-bar-vertical
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="'flame'"
+      [results]="oeeScore"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Station Names'"
+      [yAxisLabel]="'Percentage %'"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+  <div class="container">
+    <h2>Availability by Station / Instrument</h2>
+    <ngx-charts-bar-vertical-stacked
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="'ocean'"
+      [results]="availabilityByStationInMinutes"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Months'"
+      [yAxisLabel]="'Minutes'"
+    >
+    </ngx-charts-bar-vertical-stacked>
+  </div>
+  <div class="container">
+    <h2>Performance by Station / Instrument</h2>
+    <ngx-charts-bar-vertical-stacked
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="'forest'"
+      [results]="performanceByStationInMinutes"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Months'"
+      [yAxisLabel]="'Minutes'"
+    >
+    </ngx-charts-bar-vertical-stacked>
+  </div>
+  <div class="container">
+    <h2>Throughput</h2>
+    <ngx-charts-bar-vertical
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="'horizon'"
+      [results]="throughputByStation"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Station Names'"
+      [yAxisLabel]="'Percentage %'"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+  <div class="container">
+    <h2>Calibration</h2>
+    <ngx-charts-bar-vertical
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="'neons'"
+      [results]="calibrationInfo"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Station Names'"
+      [yAxisLabel]="'Percentage %'"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+</div>

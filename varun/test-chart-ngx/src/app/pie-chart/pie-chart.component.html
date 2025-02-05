@@ -1,0 +1,55 @@
+<div class="pie-container">
+  <h1>Pie Charts</h1>
+  <div class="container">
+    <h2>Test or Campaign Runs</h2>
+    <ngx-charts-pie-chart
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="colorSchemeNight"
+      [results]="testRunsByStats"
+      [legend]="true"
+      [labels]="true"
+      [doughnut]="false"
+      [explodeSlices]="false"
+    >
+    </ngx-charts-pie-chart>
+  </div>
+  <div class="container">
+    <h2>Station Status</h2>
+    <ngx-charts-pie-chart
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="colorSchemeNight"
+      [results]="stationsByStatus"
+      [legend]="true"
+      [labels]="true"
+      [doughnut]="false"
+      [explodeSlices]="false"
+    >
+    </ngx-charts-pie-chart>
+  </div>
+  <div class="container">
+    <h2>Number Status</h2>
+    <ngx-charts-pie-chart
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="colorSchemeNight"
+      [results]="numStationsByStatus"
+      [legend]="true"
+      [labels]="true"
+      [doughnut]="false"
+      [explodeSlices]="false"
+    >
+    </ngx-charts-pie-chart>
+  </div>
+  <div class="container">
+    <h2>Instrument Status</h2>
+    <ngx-charts-pie-chart
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="colorSchemeNight"
+      [results]="instrumentsByStatus"
+      [legend]="true"
+      [labels]="true"
+      [doughnut]="false"
+      [explodeSlices]="false"
+    >
+    </ngx-charts-pie-chart>
+  </div>
+</div>
