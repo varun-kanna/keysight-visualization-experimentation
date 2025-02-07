@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Graph1Component } from './graph1/graph1.component';
+import { barGraphComponent } from './barGraph/barGraph.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Graph1Component],
+  imports: [RouterOutlet, barGraphComponent, PieChartComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

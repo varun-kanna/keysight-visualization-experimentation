@@ -6,12 +6,12 @@ import PlotlyJS from 'plotly.js-dist-min';
 PlotlyModule.plotlyjs = PlotlyJS;
 
 @Component({
-  selector: 'app-graph1',
+  selector: 'app-bar-graph',
   imports: [CommonModule, PlotlyModule],
-  templateUrl: './graph1.component.html',
-  styleUrl: './graph1.component.scss'
+  templateUrl: './barGraph.component.html',
+  styleUrl: './barGraph.component.scss'
 })
-export class Graph1Component {
+export class barGraphComponent {
   graph = {
     data: [
       {
@@ -23,7 +23,9 @@ export class Graph1Component {
     layout: {
       title: 'Sample Bar Chart',
       xaxis: { title: 'Number of Test Run by Tester/Operator' },
-      yaxis: { title: 'Count' }
+      yaxis: { title: 'Count' },
+      autosize: true,
+      responsive: true,
     }
   };
 }
