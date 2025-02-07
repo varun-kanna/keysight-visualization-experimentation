@@ -1,0 +1,38 @@
+
+<style>
+/* Ensuring the content area uses flexbox and wraps charts */
+.content {
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap; /* Allow charts to wrap when they hit the edge */
+  gap: 10px; /* Optional: adds spacing between charts */
+  justify-content: space-between; /* Ensure charts are spread out evenly */
+}
+
+/* Styling for individual charts */
+.chart {
+  display: flex;
+  flex: 1 1 30%; /* Set each chart to take up 30% of the width of the container */
+  min-height: 300px; /* Ensures a minimum height for each chart */
+  margin-bottom: 20px; /* Space at the bottom of each chart */
+  position: relative;
+}
+
+.chart canvas {
+  max-width: 100%;   /* Make the canvas width 100% of the .chart container */
+  height: 100%;  /* Make the canvas height 100% of the .chart container */
+  display: block; /* Prevent canvas from creating extra space below */
+}
+
+</style>
+
+<main class="main">
+  <div class="content">
+    <app-bar-chart class="chart"></app-bar-chart>
+    <app-pie-chart class="chart"></app-pie-chart>
+    <app-donut-chart class="chart"></app-donut-chart>
+    <app-line-chart class="chart"></app-line-chart>
+    <app-layered-bar-chart class="chart"></app-layered-bar-chart>
+  </div>
+</main>
+<router-outlet />
