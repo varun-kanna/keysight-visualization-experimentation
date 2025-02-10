@@ -1,0 +1,35 @@
+/* Make the whole page fill the screen */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* Container to hold all the components */
+.container {
+  font-family:Arial, Helvetica, sans-serif;
+
+  display: flex;
+  flex-direction: column; /* Stack the elements vertically */
+  height: 100%; /* Make the container fill the whole viewport */
+}
+
+/* Style for the navigation bars (topNav, dashboardNav, filterNav) */
+.topNav, .dashboardNav, .filterNav {
+
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Make the widgetView take the remaining space */
+.widgetView {
+  border:solid;
+  border-color: white;
+  height:500px;
+  flex-grow: 1; /* Take up the remaining space */
+  overflow-y: auto; /* Make it scrollable vertically */
+  background-color: #333; /* Light background for the widget */
+  box-sizing: border-box; /* Include padding in the element's size */
+}

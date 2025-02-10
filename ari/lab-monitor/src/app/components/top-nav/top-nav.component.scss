@@ -1,0 +1,15 @@
+.dashboardActionsBtn{
+  cursor: pointer; /* Make it clickable */
+  color: white;   /* Change color to blue or any preferred color */
+  padding: 5px;
+  background-color: rgb(47, 91, 222);
+}
+.directoryContainer{
+  font-size: small;
+}
+.lab-monitor-container {
+  display: flex;
+  justify-content: space-between; /* Space between the elements */
+  align-items: center;            /* Vertically center items (if necessary) */
+  width: 100%;                    /* Ensure the container takes full width */
+}

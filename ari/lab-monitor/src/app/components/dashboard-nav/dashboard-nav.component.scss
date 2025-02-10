@@ -1,0 +1,13 @@
+.dashboardNavItem {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dashboardNavItem:hover {
+  background-color: #444; /* Change the background color on hover */
+}
+
+.dashboardNavItem{
+  padding:5px;
+}
