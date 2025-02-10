@@ -1,3 +1,41 @@
+// import { Component } from '@angular/core';
+// import { CommonModule } from '@angular/common';
+// import { NgxChartsModule } from '@swimlane/ngx-charts';
+
+// @Component({
+//   selector: 'app-bar-chart',
+//   standalone: true,
+//   imports: [CommonModule, NgxChartsModule],
+//   templateUrl: './bar-chart.component.html',
+//   styleUrls: ['./bar-chart.component.css']
+// })
+// export class BarChartComponent {
+//   // Chart options
+//   view: [number, number] = [700, 400];
+//   showXAxis = true;
+//   showYAxis = true;
+//   gradient = false;
+//   showLegend = true;
+//   showXAxisLabel = true;
+//   xAxisLabel = 'Country';
+//   showYAxisLabel = true;
+//   yAxisLabel = 'Population';
+//   colorScheme = 'vivid'
+
+//   // Sample data
+//   single = [
+//     { name: "Germany", value: 8940000 },
+//     { name: "USA", value: 5000000 },
+//     { name: "France", value: 7200000 },
+//     { name: "UK", value: 6200000 }
+//   ];
+
+//   // Click event handler
+//   onSelect(event: any): void {
+//     console.log(event);
+//   }
+// }
+
 import { Component, HostListener } from '@angular/core';
 import { NgxChartsModule, Color, ScaleType } from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
