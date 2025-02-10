@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { DashboardNavComponent } from './components/dashboard-nav/dashboard-nav.component';
 import { FilterNavComponent } from './components/filter-nav/filter-nav.component';
@@ -7,7 +6,7 @@ import { WidgetViewComponent } from './components/widget-view/widget-view.compon
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TopNavComponent, DashboardNavComponent,
+  imports: [TopNavComponent, DashboardNavComponent,
     FilterNavComponent, WidgetViewComponent
   ],
   templateUrl: './app.component.html',
