@@ -1,0 +1,33 @@
+<!-- <div class="container"><ngx-charts-bar-vertical
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="single"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  (select)="onSelect($event)">
+</ngx-charts-bar-vertical>
+</div> -->
+
+  <div class="container">
+    <ngx-charts-bar-vertical
+      [view]="[containerWidth, containerHeight]"
+      [scheme]="colorSchemeAllBlue"
+      [results]="testRunsByTester"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Tester Names'"
+      [yAxisLabel]="'Number of Test Runs'"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+  
+

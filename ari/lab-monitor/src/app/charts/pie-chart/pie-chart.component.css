@@ -1,0 +1,19 @@
+* {
+  font-family: "Verdana";
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.container {
+  color:white;
+  text-align: center;
+}
+
+::ng-deep .ngx-charts text {
+  fill: white !important;
+}

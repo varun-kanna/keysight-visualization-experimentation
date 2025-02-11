@@ -1,0 +1,27 @@
+.widgetContainerHeader{
+  display: flex;
+  justify-content: space-between;
+  border:solid;
+  border-color: grey;
+}
+.widgetContainer{
+  padding: 10px;
+  border:solid;
+  border-color: grey;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+}
+.graphContainer{
+  border:solid;
+  color: grey;
+}
+.deleteWidgetBtn{
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deleteWidgetBtn:hover {
+  background-color: #444; /* Change the background color on hover */
+}
